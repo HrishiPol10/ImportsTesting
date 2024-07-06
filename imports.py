@@ -6,7 +6,7 @@ from os import *  # Wildcard Import
 import numpy as np  # Alias Import
 
 try:
-    import cPickle as pickle  # Conditional Import
+    import cPickle as pickle  
 except ImportError:
     import pickle
 
