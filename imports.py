@@ -1,26 +1,15 @@
-import os
-import sys
-
-from os import path, remove
-
-from os import *
-import numpy as np
-import pandas as pd
-from matplotlib import pyplot as plt
+import os  # Whole Module Import
+from os import path  # Specific Import
+from os import *  # Wildcard Import
+import numpy as np  # Alias Import
+import sys  # Conditional Import (used in the try-except block)
+from . import sibling_module  # Relative Import
+from .. import parent_module  # Relative Import Upwards
 
 try:
-    import cPickle as pickle
+    import cPickle as pickle  # Conditional Import
 except ImportError:
     import pickle
-if sys.version_info[0] < 3:
-    import Tkinter as tk
-else:
-    import tkinter as tk
-
-
-from . import sibling_module
-
-from .. import parent_module
 
 
 # Import styles breakdown:
