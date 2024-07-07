@@ -6,9 +6,9 @@
 # import numpy as np  # Alias Import
 
 # try:
-#     import cPickle as pickle  
+#     import cPickle as pickle  # Alias Import
 # except ImportError:
-#     import pickle
+#     import pickle  # Whole Module Import
 
 # from . import sibling_module  # Relative Import
 # from .. import parent_module  # Relative Import Upwards
@@ -18,18 +18,18 @@ import os  # Whole Module Import
 import sys  # Whole Module Import
 import numpy  # Whole Module Import
 import pandas  # Whole Module Import
-import matplotlib
+import matplotlib # Whole Module Import
 
 from os import path, remove  # Specific Import
 from os import sep, environ  # Specific Import
 from numpy import array  # Specific Import (Third-party)
 from pandas import DataFrame  # Specific Import (Third-party)
-from matplotlib import pyplot as plt  # Specific Import (Third-party)
-from matplotlib import figure as Figure  # Specific Import (Third-party)
 
 from os import *  # Wildcard Import
 from sys import *  # Wildcard Import
 
+from matplotlib import pyplot as plt  # Alias Import (Third-party)
+from matplotlib import figure as Figure  # Alias Import  (Third-party)
 import numpy as np  # Alias Import (Third-party)
 import pandas as pd  # Alias Import (Third-party)
 import matplotlib.pyplot as plt # Alias Import (Third-party)
