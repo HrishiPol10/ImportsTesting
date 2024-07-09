@@ -26,7 +26,7 @@ from numpy import array  # Specific Import (Third-party)
 from pandas import DataFrame  # Specific Import (Third-party)
 
 from os import *  # Wildcard Import
-from sys import *  # Wildcard Import
+# from sys import *  # Wildcard Import
 
 from matplotlib import pyplot as plt  # Alias Import (Third-party)
 from matplotlib import figure as Figure  # Alias Import  (Third-party)
@@ -43,3 +43,5 @@ from . import another_sibling_module  # Relative Import
 from .. import parent_module  # Relative Import Upwards
 from .. import another_parent_module  # Relative Import Upwards
 
+imports = [sys, pathlib]
+for i in imports: import i
