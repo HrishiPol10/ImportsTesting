@@ -1,6 +1,6 @@
 import os
 import sys
-from collections import defaultdict, deque as c
+from collections import defaultdict, deque
 import numpy as np
 import pandas as pd
 import seaborn as sns  # Alias Import (Third-party)
