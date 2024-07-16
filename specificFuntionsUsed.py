@@ -5,5 +5,5 @@ import numpy as np
 
 def example_function():
     np.array([1, 2, 3])
-    os.path.join('a', 'b')
+    os.path('a', 'b')
     defaultdict(list)
