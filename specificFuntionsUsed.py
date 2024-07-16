@@ -1,8 +1,13 @@
 import os
 import sys
-from collections import defaultdict, deque
+from collections import defaultdict, deque as c
 import numpy as np
 import pandas as pd
+import seaborn as sns  # Alias Import (Third-party)
+import matplotlib as mpl  # Alias Import (Third-party)
+
+from . import sibling_module  # Relative Import
+from . import another_sibling_module  # Relative Import
 
 def example_function():
     # Single call
