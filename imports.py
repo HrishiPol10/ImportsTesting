@@ -47,7 +47,7 @@ sys.exit(0)
     
 # Single call with attribute
 path = os.path('a', 'b')
-    
+    print(abc)
 # Double call
 full_path = os.path.join('a', 'b')
     
