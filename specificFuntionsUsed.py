@@ -132,8 +132,8 @@ def process_data(numbers: List[int], labels: Tuple[str, str]) -> pd.DataFrame:
     return df
 
 
-    async def dispatch(self, request: Request, call_next: Callable[[Request], Awaitable[StreamingResponse]]) -> Response:  # type: ignore
-            return response
+    Callable[[Request]
+    Awaitable[StreamingResponse]
 
 d = defaultdict(list)
 # Alias usage
