@@ -103,7 +103,7 @@ def calculate_area(shape: Union[str, Tuple[int, int]]) -> float:
     return 0.0
 
 # Define a callable function
-def execute_callable(func: Callable[[int, int], int], a: int, b: int, func: Awaitable[None]) -> int:
+def execute_callable(func: Callable[[int, int], int], a: int, b: int, func: Awaitable[None], func: Callable[[int, int], int]) -> int:
     return func(a, b)
 
 # Define an awaitable function
@@ -141,7 +141,7 @@ class DataProcessor:
             "label2": [self.labels[1]] * len(self.numbers)
         })
 
-def process_data(numbers: List[int], labels: Tuple[str, str]) -> pd.DataFrame:
+def process_data(numbers: List[int], labels: Tuple[str, str], func: Callable[[int, int], int]) -> pd.DataFrame:
     processor = DataProcessor(numbers, labels)
     stats = processor.compute_statistics()
     df = processor.to_dataframe()
