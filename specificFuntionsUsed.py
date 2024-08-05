@@ -121,7 +121,7 @@ def overloaded_function(x: str) -> str:
     return x * 2
 
 # Use Set type
-def process_numbers(numbers: Set[int]) -> int:
+def process_numbers(numbers: Set[int]) ->  Awaitable[None]:
     return sum(numbers)
 
 class DataProcessor:
@@ -141,7 +141,7 @@ class DataProcessor:
             "label2": [self.labels[1]] * len(self.numbers)
         })
 
-def process_data(numbers: List[int], labels: Tuple[str, str], func: Callable[[int, int], int]) -> pd.DataFrame:
+def process_data(numbers: List[int], labels: Tuple[str, str], func: Callable[[int, int], int]) ->  Awaitable[None]:
     processor = DataProcessor(numbers, labels)
     stats = processor.compute_statistics()
     df = processor.to_dataframe()
