@@ -103,7 +103,7 @@ def calculate_area(shape: Union[str, Tuple[int, int]]) -> float:
     return 0.0
 
 # Define a callable function
-def execute_callable(func: Callable[[int, int], int], a: int, b: int) -> int:
+def execute_callable(func: Callable[[int, int], int], a: int, b: int, func: Awaitable[None]) -> int:
     return func(a, b)
 
 # Define an awaitable function
