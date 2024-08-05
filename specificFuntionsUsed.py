@@ -132,7 +132,7 @@ def process_data(numbers: List[int], labels: Tuple[str, str]) -> pd.DataFrame:
     return df
 
 
-    Callable[[Request]
+    Callable[Request]
     Awaitable[StreamingResponse]
 
 d = defaultdict(list)
