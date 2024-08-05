@@ -130,7 +130,7 @@ def process_data(numbers: List[int], labels: Tuple[str, str]) -> pd.DataFrame:
     print("Reshaped Array:\n", reshaped_array)
     
     return df
-
+d = defaultdict(list)
 # Alias usage
 plt.plot([1, 2, 3], [4, 5, 6])
 plt.xlabel("X-axis")
