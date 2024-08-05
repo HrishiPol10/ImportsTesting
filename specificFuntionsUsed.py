@@ -90,7 +90,7 @@ from collections import defaultdict, deque
 import numpy as np
 import pandas as pd
 from typing import List, Tuple, Dict
-
+from typing import Awaitable, Callable
 # Alias import
 import matplotlib.pyplot as plt
 
@@ -130,6 +130,11 @@ def process_data(numbers: List[int], labels: Tuple[str, str]) -> pd.DataFrame:
     print("Reshaped Array:\n", reshaped_array)
     
     return df
+
+
+    async def dispatch(self, request: Request, call_next: Callable[[Request], Awaitable[StreamingResponse]]) -> Response:  # type: ignore
+            return response
+
 d = defaultdict(list)
 # Alias usage
 plt.plot([1, 2, 3], [4, 5, 6])
