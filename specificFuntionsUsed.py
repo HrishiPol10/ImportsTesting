@@ -82,46 +82,58 @@
 
 
 # sample_script.py
+# sample_script.py
 
 import os
 import sys
 from collections import defaultdict, deque
 import numpy as np
 import pandas as pd
-from typing import List, Tuple
+from typing import List, Tuple, Dict
 
 # Alias import
 import matplotlib.pyplot as plt
 
-class MyClass:
-    def __init__(self, data: List[int]):
-        self.data = data
+class DataProcessor:
+    def __init__(self, numbers: List[int], labels: Tuple[str, str]):
+        self.numbers = numbers
+        self.labels = labels
 
-    def compute_average(self) -> float:
-        return np.mean(self.data)
+    def compute_statistics(self) -> Tuple[float, float]:
+        mean = np.mean(self.numbers)
+        std_dev = np.std(self.numbers)
+        return mean, std_dev
 
-    def create_dataframe(self) -> pd.DataFrame:
-        return pd.DataFrame({"data": self.data})
+    def to_dataframe(self) -> pd.DataFrame:
+        return pd.DataFrame({
+            "numbers": self.numbers,
+            "label1": [self.labels[0]] * len(self.numbers),
+            "label2": [self.labels[1]] * len(self.numbers)
+        })
 
-def example_function():
-    # Using os functions
-    files = os.listdir('.')
-    path = os.path.join('a', 'b')
-
-    # Using collections
-    d = defaultdict(list)
-    q = deque([1, 2, 3])
+def process_data(numbers: List[int], labels: Tuple[str, str]) -> pd.DataFrame:
+    processor = DataProcessor(numbers, labels)
+    stats = processor.compute_statistics()
+    df = processor.to_dataframe()
     
-    # Using numpy
-    array = np.array([1, 2, 3])
-    reshaped = array.reshape((3, 1))
-    average = np.mean(array)
+    # Use a dictionary to map statistics
+    stats_dict: Dict[str, float] = {
+        "mean": stats[0],
+        "std_dev": stats[1]
+    }
 
-    # Using pandas
-    df = pd.DataFrame({'A': [1, 2, 3], 'B': [4, 5, 6]})
-
+    print("Statistics:", stats_dict)
+    
+    # Use numpy operations
+    array = np.array(numbers)
+    reshaped_array = array.reshape(-1, 1)
+    print("Reshaped Array:\n", reshaped_array)
+    
     return df
 
 # Alias usage
 plt.plot([1, 2, 3], [4, 5, 6])
+plt.xlabel("X-axis")
+plt.ylabel("Y-axis")
+plt.title("Sample Plot")
 plt.show()
