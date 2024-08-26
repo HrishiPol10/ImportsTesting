@@ -1,6 +1,8 @@
 # This is a comment line
 requests==2.25.1
 numpy>=1.18.0
+numpy>=1.19.0
+
 scipy<1.6.0
 # Another comment
 invalid_entry
